@@ -10,8 +10,8 @@
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--bg)}
 body{margin:0;min-height:100dvh;background:var(--bg);color:var(--text);font-family:Sora,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.wrap{width:100%;max-width:520px;margin:0 auto;padding:0 0 34px}
-.wrap>:not(.top){margin-left:22px;margin-right:22px}
+.wrap{width:100%;margin:0 auto;padding:0 0 34px}
+.wrap>:not(.top){margin-left:clamp(16px,4vw,64px);margin-right:clamp(16px,4vw,64px)}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:linear-gradient(90deg,#0a0a0d 0%,#3d0c13 55%,#0a0a0d 100%);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
 .mark{height:46px;width:auto;display:block}
@@ -47,8 +47,8 @@ a.row:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 a.sm{padding:12px 2px;gap:11px}a.sm .ic{flex-basis:34px;height:34px;border-radius:9px}a.sm .ic svg{width:16px;height:16px}a.sm .tx{font-size:14px}
 .foot{margin-top:22px;padding:14px 16px;font-size:11px;line-height:1.7;color:var(--faint);font-weight:300}.foot p{margin:0 0 10px}.foot p:last-child{margin:0}.foot a{color:var(--muted)}
 @media (max-width:359px){.soc{grid-template-columns:1fr}.soc a.sm:nth-last-child(2){border-bottom:1px solid var(--line)}.cta{flex-direction:column}.cta a{flex:auto}h1{font-size:32px}.word b{font-size:18px}.mark{height:38px}.reg{padding:9px 14px;font-size:13px}}
-@media (min-width:700px){.wrap{max-width:600px}.wrap>:not(.top){margin-left:28px;margin-right:28px}.top{padding:18px 26px}h1{font-size:50px}.hero{padding-top:62px}.mark{height:54px}}
-@media (min-width:1100px){.wrap{max-width:760px}.wrap>:not(.top){margin-left:36px;margin-right:36px}.top{padding:20px 34px}h1{font-size:56px}}
+@media (min-width:700px){.wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,3vw,48px)}.top,.hero,.foot{grid-column:1/-1}.wrap>:not(.top){margin-left:clamp(24px,4vw,64px);margin-right:clamp(24px,4vw,64px)}.top{padding:18px clamp(24px,4vw,64px)}.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);column-gap:clamp(24px,5vw,80px);align-items:center;padding-top:62px}.hero h1,.hero .sub,.hero .sub2,.hero .cta{grid-column:1}.hero h1{grid-row:1}.hero .sub{grid-row:2}.hero .sub2{grid-row:3}.hero .cta{grid-row:4}.hero .lic{grid-column:2;grid-row:1/5;align-self:center;margin-top:0}h1{font-size:50px}.mark{height:54px}.content-section{min-width:0}.content-section h2{margin-top:24px}.foot{margin-top:16px}}
+@media (min-width:1100px){.wrap{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(24px,3vw,56px)}.wrap>:not(.top){margin-left:clamp(32px,5vw,80px);margin-right:clamp(32px,5vw,80px)}.top{padding:20px clamp(32px,5vw,80px)}.hero{column-gap:clamp(40px,8vw,140px);padding-top:clamp(72px,8vw,120px);padding-bottom:48px}.content-section h2{margin-top:20px}.foot{margin-top:30px}h1{font-size:clamp(56px,5vw,76px)}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol></svg>
@@ -64,25 +64,25 @@ a.sm{padding:12px 2px;gap:11px}a.sm .ic{flex-basis:34px;height:34px;border-radiu
 <div class="cta"><a class="p" href="http://signup.btsfxpro.org/?utm_source=linkpage&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener">Create Account</a><a class="o" href="https://btsfxpro.com" target="_blank" rel="noopener">Visit Website</a></div>
 <div class="panel lic"><i></i><p><b>Licensed for Introduction &amp; Promotion in the UAE</b><br>Dubai DET License No. 1594774<br>UAE Capital Market Authority Licence No. 20200000430<br>Introduction and promotion only, not a dealing licence.</p></div></section>
 
-<h2>Explore</h2><div class="panel">
+<section class="content-section"><h2>Explore</h2><div class="panel">
 <a class="row" href="https://btsfxpro.com/account-types" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><span class="tx">Account Types<small>Compare the available accounts</small></span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row" href="https://btsfxpro.com/economic-calendar" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="tx">Economic Calendar<small>Key events and market data</small></span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row" href="https://btsfxpro.com/market-introduction" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="tx">Market Introduction<small>Learn how the markets work</small></span><span class="go"><svg><use href="#go"/></svg></span></a>
-</div>
+</div></section>
 
-<h2>Contact</h2><div class="panel">
+<section class="content-section"><h2>Contact</h2><div class="panel">
 <a class="row" href="https://btsfxpro.com/contact-us" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="tx">Contact Us<small>Send us a message</small></span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row" href="tel:+971545948921"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span class="tx">Call +971 54 594 8921<small>Dubai office</small></span><span class="go"><svg><use href="#go"/></svg></span></a>
-</div>
+</div></section>
 
-<h2>Follow us</h2><div class="soc panel">
+<section class="content-section"><h2>Follow us</h2><div class="soc panel">
 <a class="row sm" href="https://www.instagram.com/btsfx.proofficial/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e4405f" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#e4405f"/></svg></span><span class="tx">Instagram</span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row sm" href="https://www.youtube.com/@BTSFXPRO" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 576 512" fill="#FF0000"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span><span class="tx">YouTube</span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row sm" href="https://www.tiktok.com/@bts.fxpro" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 448 512" fill="#fff"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></span><span class="tx">TikTok</span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row sm" href="https://www.facebook.com/profile.php?id=61595439015545" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 320 512" fill="#1877F2"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></span><span class="tx">Facebook</span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row sm" href="https://x.com/bts_fxpro" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 512 512" fill="#fff"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span><span class="tx">X</span><span class="go"><svg><use href="#go"/></svg></span></a>
 <a class="row sm" href="https://www.threads.com/@btsfx.proofficial" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M17 8.5C16 5 13 4 11.5 4 7.5 4 5 7 5 12s2.5 8 6.500 8c3.500 0 6-2 6-4.500S15 12 12 12s-3 1.500-3 2.500 1 2 2.500 2c2.500 0 3.500-2 3.500-5"/></svg></span><span class="tx">Threads</span><span class="go"><svg><use href="#go"/></svg></span></a>
-</div>
+</div></section>
 
 <div class="foot panel"><p><b>Risk Warning:</b> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. BTS FX PRO is licensed for introduction and promotion only and does not execute trades, provide advice, or hold client funds.</p>
 <p>BTS FX PRO does not offer services to residents of the United States, Iran, North Korea, the United Kingdom, the European Union, Pakistan (retail clients only; Introducing Brokers are accepted from this region), or other restricted jurisdictions.</p>
